@@ -9,6 +9,8 @@ const Scraper = require('./components/scraper')
 
 // Set token
 process.env['BOT_TOKEN'] = "5353208283:AAEN9STFsUq5FgQ8dmHGGIbrfNGuFIyTTCc";
+process.env['prod'] = true;
+process.env['version'] = "1.0.0";
 
 // Create Telegraf instance
 const bot = new Telegraf(process.env.BOT_TOKEN);
@@ -32,9 +34,10 @@ bot.command('subscribe', ctx => {
 
     // Split user input
     const inputSplit = ctx.update.message.text.split(' ');
+    
 
     // Extract URL
-    let url = inputSplit[1].trim();
+    let url = inputSplit[1]?.trim();
     // let url = ctx.update.message.text.substring(10).trim();
 
     // Handle errors in case of null or empty url
