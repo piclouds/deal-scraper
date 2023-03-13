@@ -41,7 +41,7 @@ bot.command('subscribe', ctx => {
     // let url = ctx.update.message.text.substring(10).trim();
 
     // Handle errors in case of null or empty url
-    if (url === null || url === '') {
+    if (url === null || url === ''|| url === undefined) {
         let errorMessages = cmod.communications.getError('empty_url');
         for (let errorMsg of errorMessages)
             ctx.reply(errorMsg);
