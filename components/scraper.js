@@ -81,7 +81,7 @@ class Scraper {
 
                 // call next and re assign to latest property
                 this.data$.next(nonExisting);
-                this.latest = newItems.map(item => item.id);
+                this.latest = nonExisting.map(item => item.id);
             })
             .catch(error => {
                 console.error("=======================[ERROR]=======================")
