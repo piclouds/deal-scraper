@@ -25,7 +25,7 @@ bot.start((ctx) => {
       for that search result.`)
 });
 bot.command('userinfo', ctx => {
-    console.log(ctx)
+    console.log(ctx.update.message.from)
 })
 // Once user enters subscribe command
 bot.command('subscribe', ctx => {
