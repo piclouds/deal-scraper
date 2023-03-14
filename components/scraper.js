@@ -51,7 +51,7 @@ class Scraper {
                     // setTimeout(1000)
                     // await this.sleep(1000);
                 }
-                myItems.sort((a, b) => b.date - a.date);
+                // myItems.sort((a, b) => b.date - a.date);
                 console.log("Loaded " + myItems.length + " items.");
 
                 // if no pre-loaded items
@@ -81,7 +81,7 @@ class Scraper {
 
                 // call next and re assign to latest property
                 this.data$.next(nonExisting);
-                this.latest = nonExisting.map(item => item.id);
+                this.latest = myItems.map(item => item.id);
             })
             .catch(error => {
                 console.error("=======================[ERROR]=======================")

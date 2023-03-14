@@ -1,5 +1,6 @@
 
 class Scraper {
+    // username
     constructor(){}
 }
 

@@ -24,7 +24,9 @@ bot.start((ctx) => {
      search terms and filters, and then using the search URL to subscribe and get notified of any new item(s)
       for that search result.`)
 });
-
+bot.command('userinfo', ctx => {
+    console.log(ctx)
+})
 // Once user enters subscribe command
 bot.command('subscribe', ctx => {
     // Get user id
